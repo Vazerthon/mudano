@@ -4,6 +4,9 @@ const theme = {
     secondary: '#dcd6ca',
     highlight: '#9a3cbb',
   },
+  layout: {
+    padding: '16px',
+  },
 };
 
 export default theme;
