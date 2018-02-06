@@ -2,21 +2,22 @@ import { takeEvery, put, call } from 'redux-saga/effects';
 import { constants, actions } from '../actions/app';
 import csvData from '../utils/csv-data';
 
-export const loadCsvData = data =>
+export const parseCsvData = data =>
   data.split('\n').map(line => {
     const [userId, name, date, unit, value] = line.split(',');
-
+    const parsedDate = new Date(date);
     return {
       userId,
       name,
-      date,
+      parsedDate,
       unit,
       value,
     };
   });
 
-function* loadDataSaga() {
-  const parsed = yield call(loadCsvData, csvData);
+export function* loadDataSaga() {
+  const data = yield csvData;
+  const parsed = yield call(parseCsvData, data);
   yield put(actions.dataLoaded(parsed));
 }
 
