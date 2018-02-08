@@ -20,13 +20,18 @@ const SplitBox = styled.div`
     } ${theme.colour.timeline[am]}`};
 `;
 
-function DayCell({ entries }) {
+function DayCell({ entries, isPublicHoliday }) {
   const am = entries.find(e => e.unit === 'AM');
   const pm = entries.find(e => e.unit === 'PM');
 
+  const defaultColourKey = isPublicHoliday ? 'P' : 'present';
+
   return (
     <Container>
-      <SplitBox am={am ? am.value : 'present'} pm={pm ? pm.value : 'present'} />
+      <SplitBox
+        am={am ? am.value : defaultColourKey}
+        pm={pm ? pm.value : defaultColourKey}
+      />
     </Container>
   );
 }
@@ -39,10 +44,12 @@ export const entryPropType = PropTypes.shape({
 
 DayCell.propTypes = {
   entries: PropTypes.arrayOf(entryPropType),
+  isPublicHoliday: PropTypes.bool,
 };
 
 DayCell.defaultProps = {
   entries: [],
+  isPublicHoliday: false,
 };
 
 export default DayCell;

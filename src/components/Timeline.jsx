@@ -53,6 +53,7 @@ function Timeline({ users, timeline }) {
               <DayCell
                 key={`${u.userId}-${prettyDate(d.date)}`}
                 entries={matchingEntries(u.entries, d.date)}
+                isPublicHoliday={d.isPublicHoliday}
               />
             ))}
           </DateColumn>
