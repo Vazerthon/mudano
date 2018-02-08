@@ -30,23 +30,38 @@ const defaultTimeline = R.pipe(
 )();
 
 const defaultAppState = {
-  entries: [],
   users: [],
   publicHolidays,
   timeline: defaultTimeline,
 };
 
-const extractUsersFromEntries = R.pipe(R.uniqBy(x => x.userId), entries =>
-  entries.map(u => ({ userId: u.userId, name: u.name })),
-);
+const entriesForUser = (entries, id) => entries.filter(e => e.userId === id);
+
+const withoutUserInfo = entry => ({
+  date: entry.parsedDate,
+  unit: entry.unit,
+  value: entry.value,
+});
+
+const extractUsersFromEntries = entries =>
+  R.pipe(
+    R.uniqBy(x => x.userId),
+    users => users.map(u => ({ userId: u.userId, name: u.name })),
+    users =>
+      users.map(u => ({
+        ...u,
+        entries: entriesForUser(entries, u.userId).map(withoutUserInfo),
+      })),
+  );
 
 const appReducer = (state = defaultAppState, action) => {
   switch (action.type) {
     case constants.dataLoaded:
       return {
         ...state,
-        entries: action.payload.entries,
-        users: extractUsersFromEntries(action.payload.entries),
+        users: extractUsersFromEntries(action.payload.entries)(
+          action.payload.entries,
+        ),
       };
     default:
       return state;
