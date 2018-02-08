@@ -7,6 +7,8 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   padding: ${({ theme }) => theme.layout.padding};
+  background-color: ${({ theme }) => theme.colour.secondary};
+  color: ${({ theme }) => theme.colour.primary};
 `;
 
 function App({ users }) {

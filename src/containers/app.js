@@ -2,8 +2,9 @@ import { connectWithLifecycle } from 'react-lifecycle-component';
 import App from '../components/app';
 import { actions } from '../state/actions/app';
 
-const mapStateToProps = ({ app }) => ({
-  users: app.users,
+const mapStateToProps = ({ app: { users, timeline } }) => ({
+  users,
+  timeline,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,5 +1,6 @@
 import * as R from 'ramda';
 import { constants } from '../actions/app';
+import getWeekDaysFrom from '../utils/date';
 
 // TODO - ideally load this as a side effect
 const publicHolidays = [
@@ -20,10 +21,13 @@ const publicHolidays = [
   { date: new Date(2019, 12, 26), label: 'Boxing Day' },
 ];
 
+const defaultTimeline = getWeekDaysFrom(new Date(), 100);
+
 const defaultAppState = {
   entries: [],
   users: [],
   publicHolidays,
+  timeline: defaultTimeline,
 };
 
 const extractUsersFromEntries = R.pipe(R.uniqBy(x => x.userId), entries =>
