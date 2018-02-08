@@ -4,7 +4,7 @@ import React from 'react';
 import shallowThemeWrapper from './test-helper';
 import theme from '../theme';
 
-import App from './app';
+import App from './App';
 
 const shallow = component => shallowThemeWrapper(component, theme);
 
