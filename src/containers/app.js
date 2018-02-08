@@ -9,7 +9,7 @@ const mapStateToProps = ({ app: { users, timeline } }) => ({
 
 const mapDispatchToProps = dispatch => ({
   loadData: () => dispatch(actions.loadData()),
-  login: () => dispatch(actions.login('Paul Vallis', 555)),
+  login: () => dispatch(actions.login('Paul Vallis', '555')),
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({

@@ -96,7 +96,7 @@ describe('app reducer', () => {
   });
 
   it('logs a user in correctly', () => {
-    const result = reducer({}, actions.login('test', 2));
+    const result = reducer({ users: [] }, actions.login('test', 2));
 
     const expected = {
       name: 'test',
@@ -104,5 +104,19 @@ describe('app reducer', () => {
     };
 
     expect(result.user).toEqual(expected);
+  });
+
+  it('Adds a user record on log in', () => {
+    const result = reducer({ users: [] }, actions.login('test', 2));
+
+    const expected = [
+      {
+        name: 'test',
+        userId: 2,
+        entries: [],
+      },
+    ];
+
+    expect(result.users).toEqual(expected);
   });
 });

@@ -44,9 +44,9 @@ const Usernames = styled.div`
 const HighlightOverlay = styled.div`
   position: fixed;
   background-color: green;
-  height: 50%;
+  height: ${({ height }) => `${height}px`};
   width: 20px;
-  margin-top: 16px;
+  margin-top: 18px;
 
   opacity: 0;
 
@@ -71,7 +71,7 @@ function Timeline({ users, timeline }) {
         <DateTimeline>
           {timeline.map(d => (
             <DateColumn key={d.date}>
-              <HighlightOverlay />
+              <HighlightOverlay height={(users.length + 1) * 20} />
               <DateLabel>{prettyDate(d.date)}</DateLabel>
               {users.map(u => (
                 <DayCell

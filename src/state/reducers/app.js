@@ -65,6 +65,7 @@ const appReducer = (state = defaultAppState, action) => {
       return {
         ...state,
         user: action.payload,
+        users: [...state.users, { ...action.payload, entries: [] }],
       };
     default:
       return state;
