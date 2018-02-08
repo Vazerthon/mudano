@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Container = styled.div`
   height: 20px;
   width: 200px;
+  margin-bottom: 1px;
 `;
 
 function Username({ children }) {

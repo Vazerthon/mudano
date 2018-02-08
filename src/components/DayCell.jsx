@@ -9,6 +9,7 @@ const Container = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
+  margin-bottom: 1px;
 `;
 
 const SplitBox = styled.div`
