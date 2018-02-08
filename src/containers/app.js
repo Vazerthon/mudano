@@ -1,5 +1,5 @@
 import { connectWithLifecycle } from 'react-lifecycle-component';
-import App from '../components/app';
+import App from '../components/App';
 import { actions } from '../state/actions/app';
 
 const mapStateToProps = ({ app: { users, timeline } }) => ({

@@ -9,6 +9,7 @@ export const getWeekDaysFrom = (start, count) => {
     const last = days[days.length - 1];
     days.push({ date: getNextWeekDay(last.date) });
   }
+
   return days;
 };
 

@@ -29,7 +29,7 @@ function Timeline({ users, timeline }) {
       <DateTimeline>
         {timeline.map(d => (
           <DateLabel key={d.date}>
-            {format(d.date, 'dddd Wo MMM YYYY')}
+            {format(d.date, 'dddd Do MMM YYYY')}
           </DateLabel>
         ))}
       </DateTimeline>
@@ -40,7 +40,7 @@ function Timeline({ users, timeline }) {
 
 export const usersPropType = PropTypes.arrayOf(userPropType);
 export const timelinePropType = PropTypes.arrayOf(
-  PropTypes.shape({ date: PropTypes.date }),
+  PropTypes.shape({ date: PropTypes.date, isPublicHoliday: PropTypes.bool }),
 );
 
 Timeline.propTypes = {
