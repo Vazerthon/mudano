@@ -31,6 +31,7 @@ const defaultTimeline = R.pipe(
 
 const defaultAppState = {
   users: [],
+  user: {},
   publicHolidays,
   timeline: defaultTimeline,
 };
@@ -59,12 +60,15 @@ const appReducer = (state = defaultAppState, action) => {
     case constants.dataLoaded:
       return {
         ...state,
-        users: extractUsersFromEntries(action.payload.entries),
+        users: [
+          ...state.users,
+          ...extractUsersFromEntries(action.payload.entries),
+        ],
       };
     case constants.login:
       return {
         ...state,
-        user: action.payload,
+        user: { ...action.payload },
         users: [...state.users, { ...action.payload, entries: [] }],
       };
     default:

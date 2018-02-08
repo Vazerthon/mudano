@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
     timeline={Array []}
+    user={Object {}}
     users={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -29,6 +30,7 @@ ShallowWrapper {
 </styled.h1>,
         <Timeline
           timeline={Array []}
+          user={Object {}}
           users={Array []}
 />,
       ],
@@ -70,6 +72,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "timeline": Array [],
+          "user": Object {},
           "users": Array [],
         },
         "ref": null,
@@ -94,6 +97,7 @@ ShallowWrapper {
 </styled.h1>,
           <Timeline
             timeline={Array []}
+            user={Object {}}
             users={Array []}
 />,
         ],
@@ -135,6 +139,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "timeline": Array [],
+            "user": Object {},
             "users": Array [],
           },
           "ref": null,

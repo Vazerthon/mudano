@@ -43,7 +43,7 @@ describe('app reducer', () => {
       },
     ];
 
-    const result = reducer({}, actions.dataLoaded(mockData));
+    const result = reducer({ users: [] }, actions.dataLoaded(mockData));
 
     const expected = [
       {

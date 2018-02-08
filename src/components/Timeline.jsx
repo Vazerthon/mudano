@@ -59,12 +59,15 @@ const matchingEntries = (entries, date) =>
 
 const prettyDate = date => format(date, 'dddd Do MMM YYYY');
 
-function Timeline({ users, timeline }) {
+function Timeline({ users, user, timeline }) {
   return (
     <Container>
       <Usernames>
-        {/* TODO - hightlight own user */}
-        {users.map(u => <Username key={u.userId}>{u.name}</Username>)}
+        {users.map(u => (
+          <Username key={u.userId} highlight={u.userId === user.userId}>
+            {u.name}
+          </Username>
+        ))}
       </Usernames>
       <Scroller>
         <DateTimeline>
@@ -100,11 +103,13 @@ export const timelinePropType = PropTypes.arrayOf(
 
 Timeline.propTypes = {
   users: usersPropType,
+  user: userPropType,
   timeline: timelinePropType,
 };
 
 Timeline.defaultProps = {
   users: [],
+  user: {},
   timeline: [],
 };
 

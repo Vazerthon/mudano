@@ -4,7 +4,9 @@ exports[`Username component renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Username />,
+  Symbol(enzyme.__unrendered__): <Username
+    highlight={false}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,6 +20,7 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": null,
+      "highlight": false,
     },
     "ref": null,
     "rendered": null,
@@ -30,6 +33,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": null,
+        "highlight": false,
       },
       "ref": null,
       "rendered": null,
