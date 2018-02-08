@@ -13,6 +13,7 @@ const mapDispatchToProps = dispatch => ({
   loadData: () => dispatch(actions.loadData()),
   login: () => dispatch(actions.login('Paul Vallis', '555')),
   stageNewEntry: entry => dispatch(actions.stageNewEntry(entry)),
+  submitEntry: entry => dispatch(actions.submitEntry(entry)),
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({

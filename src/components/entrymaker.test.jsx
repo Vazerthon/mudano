@@ -10,7 +10,9 @@ const shallow = component => shallowThemeWrapper(component, theme);
 
 describe('EntryMaker component', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<EntryMaker stageNewEntry={() => {}} />);
+    const wrapper = shallow(
+      <EntryMaker stageNewEntry={() => {}} submitEntry={() => {}} />,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

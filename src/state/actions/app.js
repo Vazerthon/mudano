@@ -3,6 +3,7 @@ export const constants = {
   dataLoaded: '[APP] DATA LOADED',
   login: '[APP] LOG A USER IN',
   stageNewEntry: '[APP] STAGE A NEW ENTRY',
+  submitEntry: '[APP] SUBMIT ENTRY',
 };
 
 export const actions = {
@@ -19,6 +20,10 @@ export const actions = {
   }),
   stageNewEntry: entry => ({
     type: constants.stageNewEntry,
+    payload: { entry },
+  }),
+  submitEntry: entry => ({
+    type: constants.submitEntry,
     payload: { entry },
   }),
 };

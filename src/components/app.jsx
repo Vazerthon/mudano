@@ -30,7 +30,14 @@ const Sub = styled.span`
   font-size: 0.6em;
 `;
 
-function App({ users, user, timeline, stageNewEntry, stagedEntry }) {
+function App({
+  users,
+  user,
+  timeline,
+  stageNewEntry,
+  stagedEntry,
+  submitEntry,
+}) {
   return (
     <Container>
       <Header>
@@ -38,7 +45,11 @@ function App({ users, user, timeline, stageNewEntry, stagedEntry }) {
       </Header>
 
       <Timeline users={users} user={user} timeline={timeline} />
-      <EntryMaker stageNewEntry={stageNewEntry} entry={stagedEntry} />
+      <EntryMaker
+        stageNewEntry={stageNewEntry}
+        entry={stagedEntry}
+        submitEntry={submitEntry}
+      />
     </Container>
   );
 }
@@ -49,6 +60,7 @@ App.propTypes = {
   timeline: timelinePropType,
   stageNewEntry: PropTypes.func.isRequired,
   stagedEntry: entryPropType,
+  submitEntry: PropTypes.func.isRequired,
 };
 
 App.defaultProps = {
