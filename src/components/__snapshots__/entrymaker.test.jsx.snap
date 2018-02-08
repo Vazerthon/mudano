@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <EntryMaker
     entry={Object {}}
     stageNewEntry={[Function]}
+    submitEntry={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,155 +21,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <DayPickerSingleDateController
-        date={undefined}
-        daySize={39}
-        enableOutsideDays={false}
-        firstDayOfWeek={null}
-        focused={false}
-        hideKeyboardShortcutsPanel={false}
-        initialVisibleMonth={null}
-        isDayBlocked={[Function]}
-        isDayHighlighted={[Function]}
-        isFocused={false}
-        isOutsideRange={[Function]}
-        isRTL={false}
-        keepOpenOnDateSelect={false}
-        monthFormat="MMMM YYYY"
-        navNext={null}
-        navPrev={null}
-        noBorder={false}
-        numberOfMonths={3}
-        onBlur={[Function]}
-        onClose={[Function]}
-        onDateChange={[Function]}
-        onFocusChange={[Function]}
-        onNextMonthClick={[Function]}
-        onOutsideClick={null}
-        onPrevMonthClick={[Function]}
-        orientation="horizontal"
-        phrases={
-                Object {
-                        "calendarLabel": "Calendar",
-                        "chooseAvailableDate": [Function],
-                        "chooseAvailableEndDate": [Function],
-                        "chooseAvailableStartDate": [Function],
-                        "dateIsSelected": [Function],
-                        "dateIsUnavailable": [Function],
-                        "enterKey": "Enter key",
-                        "escape": "Escape key",
-                        "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-                        "homeEnd": "Home and end keys",
-                        "jumpToNextMonth": "Move forward to switch to the next month.",
-                        "jumpToPrevMonth": "Move backward to switch to the previous month.",
-                        "keyboardShortcuts": "Keyboard Shortcuts",
-                        "leftArrowRightArrow": "Right and left arrow keys",
-                        "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-                        "moveFocusByOneMonth": "Switch months.",
-                        "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-                        "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-                        "openThisPanel": "Open this panel.",
-                        "pageUpPageDown": "page up and page down keys",
-                        "questionMark": "Question mark",
-                        "returnFocusToInput": "Return to the date input field.",
-                        "selectFocusedDate": "Select the date in focus.",
-                        "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-                        "upArrowDownArrow": "up and down arrow keys",
-                      }
-        }
-        renderCalendarDay={undefined}
-        renderCalendarInfo={null}
-        renderDayContents={null}
-        renderMonth={null}
-        showKeyboardShortcuts={false}
-        transitionDuration={undefined}
-        verticalHeight={null}
-        weekDayFormat="dd"
-        withPortal={false}
-/>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "date": undefined,
-        "daySize": 39,
-        "enableOutsideDays": false,
-        "firstDayOfWeek": null,
-        "focused": false,
-        "hideKeyboardShortcutsPanel": false,
-        "initialVisibleMonth": null,
-        "isDayBlocked": [Function],
-        "isDayHighlighted": [Function],
-        "isFocused": false,
-        "isOutsideRange": [Function],
-        "isRTL": false,
-        "keepOpenOnDateSelect": false,
-        "monthFormat": "MMMM YYYY",
-        "navNext": null,
-        "navPrev": null,
-        "noBorder": false,
-        "numberOfMonths": 3,
-        "onBlur": [Function],
-        "onClose": [Function],
-        "onDateChange": [Function],
-        "onFocusChange": [Function],
-        "onNextMonthClick": [Function],
-        "onOutsideClick": null,
-        "onPrevMonthClick": [Function],
-        "orientation": "horizontal",
-        "phrases": Object {
-          "calendarLabel": "Calendar",
-          "chooseAvailableDate": [Function],
-          "chooseAvailableEndDate": [Function],
-          "chooseAvailableStartDate": [Function],
-          "dateIsSelected": [Function],
-          "dateIsUnavailable": [Function],
-          "enterKey": "Enter key",
-          "escape": "Escape key",
-          "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-          "homeEnd": "Home and end keys",
-          "jumpToNextMonth": "Move forward to switch to the next month.",
-          "jumpToPrevMonth": "Move backward to switch to the previous month.",
-          "keyboardShortcuts": "Keyboard Shortcuts",
-          "leftArrowRightArrow": "Right and left arrow keys",
-          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-          "moveFocusByOneMonth": "Switch months.",
-          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-          "openThisPanel": "Open this panel.",
-          "pageUpPageDown": "page up and page down keys",
-          "questionMark": "Question mark",
-          "returnFocusToInput": "Return to the date input field.",
-          "selectFocusedDate": "Select the date in focus.",
-          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-          "upArrowDownArrow": "up and down arrow keys",
-        },
-        "renderCalendarDay": undefined,
-        "renderCalendarInfo": null,
-        "renderDayContents": null,
-        "renderMonth": null,
-        "showKeyboardShortcuts": false,
-        "transitionDuration": undefined,
-        "verticalHeight": null,
-        "weekDayFormat": "dd",
-        "withPortal": false,
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <DayPickerSingleDateController
+      "children": Array [
+        <DayPickerSingleDateController
           date={undefined}
           daySize={39}
           enableOutsideDays={false}
@@ -234,9 +88,66 @@ ShallowWrapper {
           weekDayFormat="dd"
           withPortal={false}
 />,
-      },
-      "ref": null,
-      "rendered": Object {
+        <styled.div>
+          <styled.div>
+                    <styled.div>
+                              <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                              >
+                                        AM
+                              </styled.button>
+                              <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                              >
+                                        PM
+                              </styled.button>
+                    </styled.div>
+                    <styled.div>
+                              <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                              >
+                                        Public Holiday
+                              </styled.button>
+                              <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                              >
+                                        Vacation
+                              </styled.button>
+                              <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                              >
+                                        Training
+                              </styled.button>
+                              <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                              >
+                                        Present
+                              </styled.button>
+                    </styled.div>
+          </styled.div>
+          <styled.span>
+                    TODO - warning text
+          </styled.span>
+          <styled.button
+                    disabled={true}
+                    double={true}
+                    on={undefined}
+                    onClick={[Function]}
+          >
+                    Sumbit
+          </styled.button>
+</styled.div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
@@ -308,6 +219,784 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <styled.div>
+              <styled.div>
+                            <styled.button
+                                          on={false}
+                                          onClick={[Function]}
+                            >
+                                          AM
+                            </styled.button>
+                            <styled.button
+                                          on={false}
+                                          onClick={[Function]}
+                            >
+                                          PM
+                            </styled.button>
+              </styled.div>
+              <styled.div>
+                            <styled.button
+                                          on={false}
+                                          onClick={[Function]}
+                            >
+                                          Public Holiday
+                            </styled.button>
+                            <styled.button
+                                          on={false}
+                                          onClick={[Function]}
+                            >
+                                          Vacation
+                            </styled.button>
+                            <styled.button
+                                          on={false}
+                                          onClick={[Function]}
+                            >
+                                          Training
+                            </styled.button>
+                            <styled.button
+                                          on={false}
+                                          onClick={[Function]}
+                            >
+                                          Present
+                            </styled.button>
+              </styled.div>
+</styled.div>,
+            <styled.span>
+              TODO - warning text
+</styled.span>,
+            <styled.button
+              disabled={true}
+              double={true}
+              on={undefined}
+              onClick={[Function]}
+>
+              Sumbit
+</styled.button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <styled.div>
+                  <styled.button
+                                    on={false}
+                                    onClick={[Function]}
+                  >
+                                    AM
+                  </styled.button>
+                  <styled.button
+                                    on={false}
+                                    onClick={[Function]}
+                  >
+                                    PM
+                  </styled.button>
+</styled.div>,
+                <styled.div>
+                  <styled.button
+                                    on={false}
+                                    onClick={[Function]}
+                  >
+                                    Public Holiday
+                  </styled.button>
+                  <styled.button
+                                    on={false}
+                                    onClick={[Function]}
+                  >
+                                    Vacation
+                  </styled.button>
+                  <styled.button
+                                    on={false}
+                                    onClick={[Function]}
+                  >
+                                    Training
+                  </styled.button>
+                  <styled.button
+                                    on={false}
+                                    onClick={[Function]}
+                  >
+                                    Present
+                  </styled.button>
+</styled.div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <styled.button
+                      on={false}
+                      onClick={[Function]}
+>
+                      AM
+</styled.button>,
+                    <styled.button
+                      on={false}
+                      onClick={[Function]}
+>
+                      PM
+</styled.button>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "AM",
+                      "on": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "AM",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "PM",
+                      "on": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "PM",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <styled.button
+                      on={false}
+                      onClick={[Function]}
+>
+                      Public Holiday
+</styled.button>,
+                    <styled.button
+                      on={false}
+                      onClick={[Function]}
+>
+                      Vacation
+</styled.button>,
+                    <styled.button
+                      on={false}
+                      onClick={[Function]}
+>
+                      Training
+</styled.button>,
+                    <styled.button
+                      on={false}
+                      onClick={[Function]}
+>
+                      Present
+</styled.button>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Public Holiday",
+                      "on": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Public Holiday",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Vacation",
+                      "on": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Vacation",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Training",
+                      "on": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Training",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Present",
+                      "on": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Present",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "TODO - warning text",
+            },
+            "ref": null,
+            "rendered": "TODO - warning text",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Sumbit",
+              "disabled": true,
+              "double": true,
+              "on": undefined,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Sumbit",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <DayPickerSingleDateController
+            date={undefined}
+            daySize={39}
+            enableOutsideDays={false}
+            firstDayOfWeek={null}
+            focused={false}
+            hideKeyboardShortcutsPanel={false}
+            initialVisibleMonth={null}
+            isDayBlocked={[Function]}
+            isDayHighlighted={[Function]}
+            isFocused={false}
+            isOutsideRange={[Function]}
+            isRTL={false}
+            keepOpenOnDateSelect={false}
+            monthFormat="MMMM YYYY"
+            navNext={null}
+            navPrev={null}
+            noBorder={false}
+            numberOfMonths={3}
+            onBlur={[Function]}
+            onClose={[Function]}
+            onDateChange={[Function]}
+            onFocusChange={[Function]}
+            onNextMonthClick={[Function]}
+            onOutsideClick={null}
+            onPrevMonthClick={[Function]}
+            orientation="horizontal"
+            phrases={
+                        Object {
+                                    "calendarLabel": "Calendar",
+                                    "chooseAvailableDate": [Function],
+                                    "chooseAvailableEndDate": [Function],
+                                    "chooseAvailableStartDate": [Function],
+                                    "dateIsSelected": [Function],
+                                    "dateIsUnavailable": [Function],
+                                    "enterKey": "Enter key",
+                                    "escape": "Escape key",
+                                    "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+                                    "homeEnd": "Home and end keys",
+                                    "jumpToNextMonth": "Move forward to switch to the next month.",
+                                    "jumpToPrevMonth": "Move backward to switch to the previous month.",
+                                    "keyboardShortcuts": "Keyboard Shortcuts",
+                                    "leftArrowRightArrow": "Right and left arrow keys",
+                                    "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+                                    "moveFocusByOneMonth": "Switch months.",
+                                    "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+                                    "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+                                    "openThisPanel": "Open this panel.",
+                                    "pageUpPageDown": "page up and page down keys",
+                                    "questionMark": "Question mark",
+                                    "returnFocusToInput": "Return to the date input field.",
+                                    "selectFocusedDate": "Select the date in focus.",
+                                    "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+                                    "upArrowDownArrow": "up and down arrow keys",
+                                  }
+            }
+            renderCalendarDay={undefined}
+            renderCalendarInfo={null}
+            renderDayContents={null}
+            renderMonth={null}
+            showKeyboardShortcuts={false}
+            transitionDuration={undefined}
+            verticalHeight={null}
+            weekDayFormat="dd"
+            withPortal={false}
+/>,
+          <styled.div>
+            <styled.div>
+                        <styled.div>
+                                    <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                    >
+                                                AM
+                                    </styled.button>
+                                    <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                    >
+                                                PM
+                                    </styled.button>
+                        </styled.div>
+                        <styled.div>
+                                    <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                    >
+                                                Public Holiday
+                                    </styled.button>
+                                    <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                    >
+                                                Vacation
+                                    </styled.button>
+                                    <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                    >
+                                                Training
+                                    </styled.button>
+                                    <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                    >
+                                                Present
+                                    </styled.button>
+                        </styled.div>
+            </styled.div>
+            <styled.span>
+                        TODO - warning text
+            </styled.span>
+            <styled.button
+                        disabled={true}
+                        double={true}
+                        on={undefined}
+                        onClick={[Function]}
+            >
+                        Sumbit
+            </styled.button>
+</styled.div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "date": undefined,
+            "daySize": 39,
+            "enableOutsideDays": false,
+            "firstDayOfWeek": null,
+            "focused": false,
+            "hideKeyboardShortcutsPanel": false,
+            "initialVisibleMonth": null,
+            "isDayBlocked": [Function],
+            "isDayHighlighted": [Function],
+            "isFocused": false,
+            "isOutsideRange": [Function],
+            "isRTL": false,
+            "keepOpenOnDateSelect": false,
+            "monthFormat": "MMMM YYYY",
+            "navNext": null,
+            "navPrev": null,
+            "noBorder": false,
+            "numberOfMonths": 3,
+            "onBlur": [Function],
+            "onClose": [Function],
+            "onDateChange": [Function],
+            "onFocusChange": [Function],
+            "onNextMonthClick": [Function],
+            "onOutsideClick": null,
+            "onPrevMonthClick": [Function],
+            "orientation": "horizontal",
+            "phrases": Object {
+              "calendarLabel": "Calendar",
+              "chooseAvailableDate": [Function],
+              "chooseAvailableEndDate": [Function],
+              "chooseAvailableStartDate": [Function],
+              "dateIsSelected": [Function],
+              "dateIsUnavailable": [Function],
+              "enterKey": "Enter key",
+              "escape": "Escape key",
+              "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+              "homeEnd": "Home and end keys",
+              "jumpToNextMonth": "Move forward to switch to the next month.",
+              "jumpToPrevMonth": "Move backward to switch to the previous month.",
+              "keyboardShortcuts": "Keyboard Shortcuts",
+              "leftArrowRightArrow": "Right and left arrow keys",
+              "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+              "moveFocusByOneMonth": "Switch months.",
+              "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+              "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+              "openThisPanel": "Open this panel.",
+              "pageUpPageDown": "page up and page down keys",
+              "questionMark": "Question mark",
+              "returnFocusToInput": "Return to the date input field.",
+              "selectFocusedDate": "Select the date in focus.",
+              "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+              "upArrowDownArrow": "up and down arrow keys",
+            },
+            "renderCalendarDay": undefined,
+            "renderCalendarInfo": null,
+            "renderDayContents": null,
+            "renderMonth": null,
+            "showKeyboardShortcuts": false,
+            "transitionDuration": undefined,
+            "verticalHeight": null,
+            "weekDayFormat": "dd",
+            "withPortal": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <styled.div>
+                <styled.div>
+                                <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                >
+                                                AM
+                                </styled.button>
+                                <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                >
+                                                PM
+                                </styled.button>
+                </styled.div>
+                <styled.div>
+                                <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                >
+                                                Public Holiday
+                                </styled.button>
+                                <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                >
+                                                Vacation
+                                </styled.button>
+                                <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                >
+                                                Training
+                                </styled.button>
+                                <styled.button
+                                                on={false}
+                                                onClick={[Function]}
+                                >
+                                                Present
+                                </styled.button>
+                </styled.div>
+</styled.div>,
+              <styled.span>
+                TODO - warning text
+</styled.span>,
+              <styled.button
+                disabled={true}
+                double={true}
+                on={undefined}
+                onClick={[Function]}
+>
+                Sumbit
+</styled.button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <styled.div>
+                    <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                    >
+                                        AM
+                    </styled.button>
+                    <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                    >
+                                        PM
+                    </styled.button>
+</styled.div>,
+                  <styled.div>
+                    <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                    >
+                                        Public Holiday
+                    </styled.button>
+                    <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                    >
+                                        Vacation
+                    </styled.button>
+                    <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                    >
+                                        Training
+                    </styled.button>
+                    <styled.button
+                                        on={false}
+                                        onClick={[Function]}
+                    >
+                                        Present
+                    </styled.button>
+</styled.div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <styled.button
+                        on={false}
+                        onClick={[Function]}
+>
+                        AM
+</styled.button>,
+                      <styled.button
+                        on={false}
+                        onClick={[Function]}
+>
+                        PM
+</styled.button>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "AM",
+                        "on": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "AM",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "PM",
+                        "on": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "PM",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <styled.button
+                        on={false}
+                        onClick={[Function]}
+>
+                        Public Holiday
+</styled.button>,
+                      <styled.button
+                        on={false}
+                        onClick={[Function]}
+>
+                        Vacation
+</styled.button>,
+                      <styled.button
+                        on={false}
+                        onClick={[Function]}
+>
+                        Training
+</styled.button>,
+                      <styled.button
+                        on={false}
+                        onClick={[Function]}
+>
+                        Present
+</styled.button>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Public Holiday",
+                        "on": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Public Holiday",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Vacation",
+                        "on": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Vacation",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Training",
+                        "on": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Training",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Present",
+                        "on": false,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Present",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "TODO - warning text",
+              },
+              "ref": null,
+              "rendered": "TODO - warning text",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Sumbit",
+                "disabled": true,
+                "double": true,
+                "on": undefined,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Sumbit",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
       "type": [Function],
     },
   ],
