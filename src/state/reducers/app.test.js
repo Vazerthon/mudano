@@ -94,4 +94,15 @@ describe('app reducer', () => {
 
     expect(result.users).toEqual(expected);
   });
+
+  it('logs a user in correctly', () => {
+    const result = reducer({}, actions.login('test', 2));
+
+    const expected = {
+      name: 'test',
+      userId: 2,
+    };
+
+    expect(result.user).toEqual(expected);
+  });
 });

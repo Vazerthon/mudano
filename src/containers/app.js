@@ -9,12 +9,16 @@ const mapStateToProps = ({ app: { users, timeline } }) => ({
 
 const mapDispatchToProps = dispatch => ({
   loadData: () => dispatch(actions.loadData()),
+  login: () => dispatch(actions.login('Paul Vallis', 555)),
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({
   ...stateProps,
   ...dispatchProps,
-  componentDidMount: () => dispatchProps.loadData(),
+  componentDidMount: () => {
+    dispatchProps.loadData();
+    dispatchProps.login();
+  },
 });
 
 export default connectWithLifecycle(

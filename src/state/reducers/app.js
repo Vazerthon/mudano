@@ -61,6 +61,11 @@ const appReducer = (state = defaultAppState, action) => {
         ...state,
         users: extractUsersFromEntries(action.payload.entries),
       };
+    case constants.login:
+      return {
+        ...state,
+        user: action.payload,
+      };
     default:
       return state;
   }
