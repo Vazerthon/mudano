@@ -8,7 +8,7 @@ import DayCell, { entryPropType } from './DayCell';
 
 const Container = styled.div`
   display: flex;
-  height: 66vh;
+  height: 63vh;
   align-items: flex-end;
 `;
 
@@ -57,7 +57,7 @@ const HighlightOverlay = styled.div`
 const matchingEntries = (entries, date) =>
   entries.filter(e => isEqual(e.date, date));
 
-const prettyDate = date => format(date, "ddd Do MMM 'YY");
+const prettyDate = date => format(date, 'Do MMM YY');
 
 function Timeline({ users, user, timeline }) {
   return (

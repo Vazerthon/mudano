@@ -47,7 +47,7 @@ const Warnings = styled.span``;
 
 const allowSubmit = entry => entry.date && entry.unit && entry.value;
 
-function EntryMaker({ stageNewEntry, entry, submitEntry }) {
+function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
   const patch = diff => ({ ...entry, ...diff });
 
   return (
@@ -111,7 +111,7 @@ function EntryMaker({ stageNewEntry, entry, submitEntry }) {
           on={allowSubmit(entry)}
           disabled={!allowSubmit(entry)}
           double
-          onClick={() => submitEntry({ entry })}
+          onClick={() => submitEntry(userId, entry)}
         >
           Sumbit
         </StyledButton>
@@ -124,10 +124,12 @@ EntryMaker.propTypes = {
   stageNewEntry: PropTypes.func.isRequired,
   entry: entryPropType,
   submitEntry: PropTypes.func.isRequired,
+  userId: PropTypes.string,
 };
 
 EntryMaker.defaultProps = {
   entry: {},
+  userId: '',
 };
 
 export default EntryMaker;

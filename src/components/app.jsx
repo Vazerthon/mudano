@@ -16,6 +16,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+
   padding: ${({ theme }) => theme.layout.padding};
   background-color: ${({ theme }) => theme.colour.secondary};
   color: ${({ theme }) => theme.colour.primary};
@@ -23,6 +24,7 @@ const Container = styled.div`
 
 const Header = styled.h1`
   color: ${({ theme }) => theme.colour.highlight};
+  margin: 5px;
 `;
 
 const Sub = styled.span`
@@ -49,6 +51,7 @@ function App({
         stageNewEntry={stageNewEntry}
         entry={stagedEntry}
         submitEntry={submitEntry}
+        userId={user.userId}
       />
     </Container>
   );

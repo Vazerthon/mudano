@@ -11,7 +11,7 @@ const theme = {
     },
   },
   layout: {
-    padding: '16px',
+    padding: '8px',
   },
 };
 

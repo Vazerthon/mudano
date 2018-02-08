@@ -22,8 +22,8 @@ export const actions = {
     type: constants.stageNewEntry,
     payload: { entry },
   }),
-  submitEntry: entry => ({
+  submitEntry: (userId, entry) => ({
     type: constants.submitEntry,
-    payload: { entry },
+    payload: { userId, entry },
   }),
 };

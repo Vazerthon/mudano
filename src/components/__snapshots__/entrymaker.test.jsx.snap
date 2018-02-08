@@ -8,6 +8,7 @@ ShallowWrapper {
     entry={Object {}}
     stageNewEntry={[Function]}
     submitEntry={[Function]}
+    userId=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

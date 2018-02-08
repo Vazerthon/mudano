@@ -25,7 +25,7 @@ const addPublicHolidayFlag = dates =>
   assignPublicHolidayStatus(dates, publicHolidays);
 
 const defaultTimeline = R.pipe(
-  () => getWeekDaysFrom(new Date(2017, 0, 1), 300),
+  () => getWeekDaysFrom(new Date(2017, 0, 1), 365),
   addPublicHolidayFlag,
 )();
 
@@ -56,6 +56,9 @@ const extractUsersFromEntries = entries =>
       })),
   )(entries);
 
+// TODO - implement updating entries
+const addNewEntryForUser = (users, userId, entry) => users;
+
 const appReducer = (state = defaultAppState, action) => {
   switch (action.type) {
     case constants.dataLoaded:
@@ -76,6 +79,16 @@ const appReducer = (state = defaultAppState, action) => {
       return {
         ...state,
         stagedEntry: action.payload.entry,
+      };
+    case constants.submitEntry:
+      return {
+        ...state,
+        stagedEntry: {},
+        users: addNewEntryForUser(
+          state.users,
+          action.payload.userId,
+          action.payload.entry,
+        ),
       };
     default:
       return state;
