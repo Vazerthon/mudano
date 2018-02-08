@@ -33,6 +33,7 @@ ShallowWrapper {
           user={Object {}}
           users={Array []}
 />,
+        <EntryMaker />,
       ],
     },
     "ref": null,
@@ -79,6 +80,15 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": [Function],
   },
@@ -100,6 +110,7 @@ ShallowWrapper {
             user={Object {}}
             users={Array []}
 />,
+          <EntryMaker />,
         ],
       },
       "ref": null,
@@ -142,6 +153,15 @@ ShallowWrapper {
             "user": Object {},
             "users": Array [],
           },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],

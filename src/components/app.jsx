@@ -7,6 +7,8 @@ import Timeline, {
   timelinePropType,
 } from './Timeline';
 
+import EntryMaker from './EntryMaker';
+
 const Container = styled.div`
   height: 100vh;
   display: flex;
@@ -33,6 +35,7 @@ function App({ users, user, timeline }) {
       </Header>
 
       <Timeline users={users} user={user} timeline={timeline} />
+      <EntryMaker />
     </Container>
   );
 }
