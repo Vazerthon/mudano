@@ -25,7 +25,7 @@ const addPublicHolidayFlag = dates =>
   assignPublicHolidayStatus(dates, publicHolidays);
 
 const defaultTimeline = R.pipe(
-  () => getWeekDaysFrom(new Date(2018, 1, 8), 40),
+  () => getWeekDaysFrom(new Date(2017, 0, 1), 300),
   addPublicHolidayFlag,
 )();
 

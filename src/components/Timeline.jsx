@@ -33,8 +33,8 @@ const Usernames = styled.div`
   flex-direction: column;
 `;
 
-const matchingEntry = (entries, date) =>
-  entries.find(e => isEqual(e.date, date));
+const matchingEntries = (entries, date) =>
+  entries.filter(e => isEqual(e.date, date));
 
 const prettyDate = date => format(date, 'dddd Do MMM YYYY');
 
@@ -52,7 +52,7 @@ function Timeline({ users, timeline }) {
             {users.map(u => (
               <DayCell
                 key={`${u.userId}-${prettyDate(d.date)}`}
-                entry={matchingEntry(u.entries, d.date)}
+                entries={matchingEntries(u.entries, d.date)}
               />
             ))}
           </DateColumn>

@@ -5,13 +5,30 @@ import PropTypes from 'prop-types';
 const Container = styled.div`
   background-color: ${({ theme }) => theme.colour.highlight};
   height: 20px;
+  width: 20px;
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
 `;
 
-function DayCell({ entry }) {
-  return <Container>{entry && 'x'}</Container>;
+const SplitBox = styled.div`
+  border-width: 10px;
+  border-style: solid;
+  border-color: ${({ theme, am, pm }) =>
+    `${theme.colour.timeline[pm]} ${theme.colour.timeline[pm]} ${
+      theme.colour.timeline[am]
+    } ${theme.colour.timeline[am]}`};
+`;
+
+function DayCell({ entries }) {
+  const am = entries.find(e => e.unit === 'AM');
+  const pm = entries.find(e => e.unit === 'PM');
+
+  return (
+    <Container>
+      <SplitBox am={am ? am.value : 'present'} pm={pm ? pm.value : 'present'} />
+    </Container>
+  );
 }
 
 export const entryPropType = PropTypes.shape({
@@ -21,11 +38,11 @@ export const entryPropType = PropTypes.shape({
 });
 
 DayCell.propTypes = {
-  entry: entryPropType,
+  entries: PropTypes.arrayOf(entryPropType),
 };
 
 DayCell.defaultProps = {
-  entry: null,
+  entries: [],
 };
 
 export default DayCell;
