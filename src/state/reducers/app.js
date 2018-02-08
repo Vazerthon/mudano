@@ -25,7 +25,7 @@ const addPublicHolidayFlag = dates =>
   assignPublicHolidayStatus(dates, publicHolidays);
 
 const defaultTimeline = R.pipe(
-  () => getWeekDaysFrom(new Date(2018, 1, 8), 100),
+  () => getWeekDaysFrom(new Date(2018, 1, 8), 40),
   addPublicHolidayFlag,
 )();
 
@@ -52,16 +52,14 @@ const extractUsersFromEntries = entries =>
         ...u,
         entries: entriesForUser(entries, u.userId).map(withoutUserInfo),
       })),
-  );
+  )(entries);
 
 const appReducer = (state = defaultAppState, action) => {
   switch (action.type) {
     case constants.dataLoaded:
       return {
         ...state,
-        users: extractUsersFromEntries(action.payload.entries)(
-          action.payload.entries,
-        ),
+        users: extractUsersFromEntries(action.payload.entries),
       };
     default:
       return state;

@@ -24,11 +24,24 @@ ShallowWrapper {
         <styled.div>
           
 </styled.div>,
-        Array [],
+        <styled.div>
+          
+</styled.div>,
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [],
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -53,11 +66,24 @@ ShallowWrapper {
           <styled.div>
             
 </styled.div>,
-          Array [],
+          <styled.div>
+            
+</styled.div>,
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [],
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
