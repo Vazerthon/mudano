@@ -8,21 +8,19 @@ import DayCell, { entryPropType } from './DayCell';
 
 const Container = styled.div`
   display: flex;
-  height: 80vh;
-  align-items: center;
+  height: 72vh;
+  align-items: flex-end;
 `;
 
 const Scroller = styled.div`
   overflow-x: auto;
   display: flex;
-  align-items: center;
-  height: 110%;
-  margin-top: 12px;
+  align-items: flex-end;
+  height: 100%;
 `;
 
 const DateTimeline = styled.div`
   display: flex;
-  margin-top: -20px;
 `;
 
 const DateColumn = styled.div`
@@ -39,6 +37,7 @@ const DateLabel = styled.span`
 const Usernames = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
 `;
 
 const HighlightOverlay = styled.div`
