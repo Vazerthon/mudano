@@ -1,6 +1,6 @@
 import * as R from 'ramda';
 import { constants } from '../actions/app';
-import getWeekDaysFrom from '../utils/date';
+import { getWeekDaysFrom } from '../utils/date';
 
 // TODO - ideally load this as a side effect
 const publicHolidays = [
