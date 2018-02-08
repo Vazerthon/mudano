@@ -20,39 +20,51 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Timeline
-        timeline={Array []}
-        users={Array []}
-/>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "timeline": Array [],
-        "users": Array [],
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Timeline
+      "children": Array [
+        <styled.h1>
+          Mudano / 
+          <styled.span>
+                    Absentee Manager
+          </styled.span>
+</styled.h1>,
+        <Timeline
           timeline={Array []}
           users={Array []}
 />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            "Mudano / ",
+            <styled.span>
+              Absentee Manager
+</styled.span>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Mudano / ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Absentee Manager",
+            },
+            "ref": null,
+            "rendered": "Absentee Manager",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
@@ -64,6 +76,72 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <styled.h1>
+            Mudano / 
+            <styled.span>
+                        Absentee Manager
+            </styled.span>
+</styled.h1>,
+          <Timeline
+            timeline={Array []}
+            users={Array []}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              "Mudano / ",
+              <styled.span>
+                Absentee Manager
+</styled.span>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Mudano / ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Absentee Manager",
+              },
+              "ref": null,
+              "rendered": "Absentee Manager",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "timeline": Array [],
+            "users": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": [Function],
     },
   ],
