@@ -34,6 +34,7 @@ const defaultAppState = {
   user: {},
   publicHolidays,
   timeline: defaultTimeline,
+  stagedEntry: {},
 };
 
 const entriesForUser = (entries, id) => entries.filter(e => e.userId === id);
@@ -70,6 +71,11 @@ const appReducer = (state = defaultAppState, action) => {
         ...state,
         user: { ...action.payload },
         users: [...state.users, { ...action.payload, entries: [] }],
+      };
+    case constants.stageNewEntry:
+      return {
+        ...state,
+        stagedEntry: action.payload.entry,
       };
     default:
       return state;

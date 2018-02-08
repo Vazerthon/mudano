@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Timeline, {
   usersPropType,
@@ -8,6 +9,8 @@ import Timeline, {
 } from './Timeline';
 
 import EntryMaker from './EntryMaker';
+
+import { entryPropType } from './DayCell';
 
 const Container = styled.div`
   height: 100vh;
@@ -27,7 +30,7 @@ const Sub = styled.span`
   font-size: 0.6em;
 `;
 
-function App({ users, user, timeline }) {
+function App({ users, user, timeline, stageNewEntry, stagedEntry }) {
   return (
     <Container>
       <Header>
@@ -35,7 +38,7 @@ function App({ users, user, timeline }) {
       </Header>
 
       <Timeline users={users} user={user} timeline={timeline} />
-      <EntryMaker />
+      <EntryMaker stageNewEntry={stageNewEntry} entry={stagedEntry} />
     </Container>
   );
 }
@@ -44,12 +47,15 @@ App.propTypes = {
   users: usersPropType,
   user: userPropType,
   timeline: timelinePropType,
+  stageNewEntry: PropTypes.func.isRequired,
+  stagedEntry: entryPropType,
 };
 
 App.defaultProps = {
   users: [],
   user: {},
   timeline: [],
+  stagedEntry: {},
 };
 
 export default App;

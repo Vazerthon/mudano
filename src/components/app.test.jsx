@@ -10,7 +10,7 @@ const shallow = component => shallowThemeWrapper(component, theme);
 
 describe('app component', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<App stageNewEntry={() => {}} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

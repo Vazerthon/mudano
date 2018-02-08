@@ -4,26 +4,33 @@ import PropTypes from 'prop-types';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-
 import { DayPickerSingleDateController } from 'react-dates';
+
+import { entryPropType } from './DayCell';
 
 const Container = styled.div``;
 
-function EntryMaker({ onDateChange }) {
+function EntryMaker({ stageNewEntry, entry }) {
+  const patch = diff => ({ ...entry, ...diff });
+
   return (
     <Container>
       <DayPickerSingleDateController
         numberOfMonths={3}
-        onDateChange={onDateChange}
+        onDateChange={date => stageNewEntry(patch({ date }))}
+        date={entry.date}
       />
     </Container>
   );
 }
 
 EntryMaker.propTypes = {
-  onDateChange: PropTypes.func.isRequired,
+  stageNewEntry: PropTypes.func.isRequired,
+  entry: entryPropType,
 };
 
-EntryMaker.defaultProps = {};
+EntryMaker.defaultProps = {
+  entry: {},
+};
 
 export default EntryMaker;

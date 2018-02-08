@@ -119,4 +119,15 @@ describe('app reducer', () => {
 
     expect(result.users).toEqual(expected);
   });
+
+  it('Stages a new entry correctly', () => {
+    const payload = { date: new Date(1, 1, 1), unit: 'x', value: 'y' };
+
+    const { stagedEntry } = reducer(
+      { stagedEntry: {} },
+      actions.stageNewEntry(payload),
+    );
+
+    expect(stagedEntry).toEqual(payload);
+  });
 });

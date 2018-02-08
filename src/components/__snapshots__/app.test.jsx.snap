@@ -5,6 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    stageNewEntry={[Function]}
+    stagedEntry={Object {}}
     timeline={Array []}
     user={Object {}}
     users={Array []}
@@ -33,7 +35,10 @@ ShallowWrapper {
           user={Object {}}
           users={Array []}
 />,
-        <EntryMaker />,
+        <EntryMaker
+          entry={Object {}}
+          stageNewEntry={[Function]}
+/>,
       ],
     },
     "ref": null,
@@ -84,7 +89,10 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "entry": Object {},
+          "stageNewEntry": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -110,7 +118,10 @@ ShallowWrapper {
             user={Object {}}
             users={Array []}
 />,
-          <EntryMaker />,
+          <EntryMaker
+            entry={Object {}}
+            stageNewEntry={[Function]}
+/>,
         ],
       },
       "ref": null,
@@ -161,7 +172,10 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "entry": Object {},
+            "stageNewEntry": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
