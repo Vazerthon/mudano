@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`app component renders correctly 1`] = `
+exports[`timeline component renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App
+  Symbol(enzyme.__unrendered__): <Timeline
     timeline={Array []}
     users={Array []}
 />,
@@ -20,24 +20,27 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": <Timeline
-        timeline={Array []}
-        users={Array []}
-/>,
+      "children": Array [
+        <styled.div>
+          
+</styled.div>,
+        Array [],
+      ],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "timeline": Array [],
-        "users": Array [],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [],
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": [Function],
       },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
+    ],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -46,24 +49,27 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": <Timeline
-          timeline={Array []}
-          users={Array []}
-/>,
+        "children": Array [
+          <styled.div>
+            
+</styled.div>,
+          Array [],
+        ],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "timeline": Array [],
-          "users": Array [],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [],
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": [Function],
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      ],
       "type": [Function],
     },
   ],

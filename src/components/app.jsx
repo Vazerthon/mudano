@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Timeline, { usersPropType } from './Timeline';
+import Timeline, { usersPropType, timelinePropType } from './Timeline';
 
 const Container = styled.div`
   height: 100vh;
@@ -11,20 +11,22 @@ const Container = styled.div`
   color: ${({ theme }) => theme.colour.primary};
 `;
 
-function App({ users }) {
+function App({ users, timeline }) {
   return (
     <Container>
-      <Timeline users={users} />
+      <Timeline users={users} timeline={timeline} />
     </Container>
   );
 }
 
 App.propTypes = {
   users: usersPropType,
+  timeline: timelinePropType,
 };
 
 App.defaultProps = {
   users: [],
+  timeline: [],
 };
 
 export default App;
