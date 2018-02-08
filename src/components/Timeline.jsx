@@ -41,6 +41,20 @@ const Usernames = styled.div`
   flex-direction: column;
 `;
 
+const HighlightOverlay = styled.div`
+  position: fixed;
+  background-color: green;
+  height: 50%;
+  width: 20px;
+  margin-top: 16px;
+
+  opacity: 0;
+
+  :hover {
+    opacity: 0.4;
+  }
+`;
+
 const matchingEntries = (entries, date) =>
   entries.filter(e => isEqual(e.date, date));
 
@@ -57,6 +71,7 @@ function Timeline({ users, timeline }) {
         <DateTimeline>
           {timeline.map(d => (
             <DateColumn key={d.date}>
+              <HighlightOverlay />
               <DateLabel>{prettyDate(d.date)}</DateLabel>
               {users.map(u => (
                 <DayCell
