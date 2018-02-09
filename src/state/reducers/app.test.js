@@ -121,14 +121,14 @@ describe('app reducer', () => {
   });
 
   it('Stages a new entry correctly', () => {
-    const payload = { date: new Date(1, 1, 1), unit: 'x', value: 'y' };
+    const payload = { date: new Date(2020, 1, 1), unit: 'x', value: 'y' };
 
     const { stagedEntry } = reducer(
       { stagedEntry: {} },
       actions.stageNewEntry(payload),
     );
 
-    expect(stagedEntry).toEqual(payload);
+    expect(stagedEntry).toEqual({ ...payload, warnings: [] });
   });
 
   it('Submits a new entry correctly', () => {
@@ -152,5 +152,15 @@ describe('app reducer', () => {
     const resultB = reducer(resultA, actions.submitEntry('abc', entryB));
 
     expect(resultB.users[0].entries.length).toBe(1);
+  });
+
+  it('Warns if staged entry is in the past', () => {
+    const entry = { date: new Date(2017, 0, 1) };
+
+    const state = { stagedEntry: {}, users: [{ userId: 'abc', entries: [] }] };
+
+    const { stagedEntry } = reducer(state, actions.stageNewEntry(entry));
+
+    expect(stagedEntry.warnings).toEqual(['This entry is in the past']);
   });
 });

@@ -6,6 +6,8 @@ import {
   prettyDate,
 } from '../utils/date';
 
+import { isPast } from 'date-fns';
+
 // TODO - ideally load this as a side effect
 const publicHolidays = [
   { date: new Date(2018, 2, 30), label: 'Good Friday' },
@@ -91,6 +93,17 @@ const addNewEntryForUser = (users, userId, entry) =>
     i => updateUserEntry(users, i, entry),
   )();
 
+const addWarningsToStagedEntry = (entry, users) =>
+  R.pipe(
+    e => ({ ...e, warnings: [] }),
+    e => ({
+      ...e,
+      warnings: isPast(e.date)
+        ? [...e.warnings, 'This entry is in the past']
+        : e.warnings,
+    }),
+  )(entry);
+
 const appReducer = (state = defaultAppState, action) => {
   switch (action.type) {
     case constants.dataLoaded:
@@ -116,7 +129,10 @@ const appReducer = (state = defaultAppState, action) => {
     case constants.stageNewEntry:
       return {
         ...state,
-        stagedEntry: action.payload.entry,
+        stagedEntry: addWarningsToStagedEntry(
+          action.payload.entry,
+          state.users,
+        ),
       };
     case constants.submitEntry:
       return {
