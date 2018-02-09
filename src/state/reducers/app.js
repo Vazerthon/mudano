@@ -165,7 +165,7 @@ const appReducer = (state = defaultAppState, action) => {
     case constants.submitEntry:
       return {
         ...state,
-        stagedEntry: {},
+        stagedEntry: { warnings: [] },
         users: [
           ...addNewEntryForUser(
             state.users,

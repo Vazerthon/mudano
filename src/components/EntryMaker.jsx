@@ -11,6 +11,10 @@ import { entryPropType } from './DayCell';
 
 const Container = styled.div`
   display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: ${({ theme }) => theme.colour.secondary};
 `;
 
 const StyledButton = styled.button`

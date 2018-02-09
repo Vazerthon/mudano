@@ -138,7 +138,7 @@ describe('app reducer', () => {
 
     const result = reducer(state, actions.submitEntry('abc', entry));
 
-    expect(result.stagedEntry).toEqual({});
+    expect(result.stagedEntry).toEqual({ warnings: [] });
     expect(result.users[0].entries[0]).toEqual(entry);
   });
 

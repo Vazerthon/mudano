@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { prettyDate } from '../state/utils/date';
+import { areEqual, prettyDate } from '../state/utils/date';
 
 import Username from './Username';
 import DayCell, { entryPropType } from './DayCell';
@@ -55,9 +55,8 @@ const HighlightOverlay = styled.div`
   }
 `;
 
-// matching on date only string avoids time/daylight savings problems
 const matchingEntries = (entries, date) =>
-  entries.filter(e => prettyDate(e.date) === prettyDate(date));
+  entries.filter(e => areEqual(e.date, date));
 
 function Timeline({ users, user, timeline }) {
   return (
