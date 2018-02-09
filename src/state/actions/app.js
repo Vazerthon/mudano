@@ -4,6 +4,7 @@ export const constants = {
   login: '[APP] LOG A USER IN',
   stageNewEntry: '[APP] STAGE A NEW ENTRY',
   submitEntry: '[APP] SUBMIT ENTRY',
+  saveEntries: '[APP] SAVE ALL ENTRIES',
 };
 
 export const actions = {
@@ -26,4 +27,5 @@ export const actions = {
     type: constants.submitEntry,
     payload: { userId, entry },
   }),
+  saveEntries: () => ({ type: constants.saveEntries }),
 };

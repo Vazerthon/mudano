@@ -1,4 +1,4 @@
-import { takeEvery, put, call } from 'redux-saga/effects';
+import { takeEvery, put, call, select } from 'redux-saga/effects';
 import { constants, actions } from '../actions/app';
 import csvData from '../utils/csv-data';
 
@@ -21,10 +21,23 @@ export function* loadDataSaga() {
   yield put(actions.dataLoaded(parsed));
 }
 
+export function* saveEntriesSaga() {
+  const userId = yield select(state => state.app.user.userId);
+  const { entries } = yield select(state =>
+    state.app.users.find(u => u.userId === userId),
+  );
+  console.log('EXAMPLE SERVER UPDATE REQUEST');
+  console.log(entries);
+}
+
 function* loadData() {
   yield takeEvery(constants.loadData, loadDataSaga);
 }
 
-const appEffects = [loadData];
+function* saveEntries() {
+  yield takeEvery(constants.saveEntries, saveEntriesSaga);
+}
+
+const appEffects = [loadData, saveEntries];
 
 export default appEffects;

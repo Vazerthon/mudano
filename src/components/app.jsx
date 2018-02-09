@@ -28,7 +28,24 @@ const Sub = styled.span`
   font-size: 0.6em;
 `;
 
-function App({ user, stageNewEntry, stagedEntry, submitEntry }) {
+const BelowTimeline = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const SaveButton = styled.button`
+  outline: none;
+  border: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  width: 200px;
+  height: 40px;
+  background-color: ${({ theme }) => theme.colour.primary};
+  color: ${({ theme }) => theme.colour.highlight};
+  align-self: flex-end;
+`;
+
+function App({ user, stageNewEntry, stagedEntry, submitEntry, saveEntries }) {
   return (
     <Container>
       <Header>
@@ -36,12 +53,15 @@ function App({ user, stageNewEntry, stagedEntry, submitEntry }) {
       </Header>
 
       <ConnectedTimeline />
-      <EntryMaker
-        stageNewEntry={stageNewEntry}
-        entry={stagedEntry}
-        submitEntry={submitEntry}
-        userId={user.userId}
-      />
+      <BelowTimeline>
+        <EntryMaker
+          stageNewEntry={stageNewEntry}
+          entry={stagedEntry}
+          submitEntry={submitEntry}
+          userId={user.userId}
+        />
+        <SaveButton onClick={saveEntries}>Save </SaveButton>
+      </BelowTimeline>
     </Container>
   );
 }
@@ -51,6 +71,7 @@ App.propTypes = {
   stageNewEntry: PropTypes.func.isRequired,
   stagedEntry: entryPropType,
   submitEntry: PropTypes.func.isRequired,
+  saveEntries: PropTypes.func.isRequired,
 };
 
 App.defaultProps = {

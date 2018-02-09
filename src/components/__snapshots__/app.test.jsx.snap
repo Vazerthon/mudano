@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
+    saveEntries={[Function]}
     stageNewEntry={[Function]}
     stagedEntry={Object {}}
     submitEntry={[Function]}
@@ -30,12 +31,19 @@ ShallowWrapper {
           </styled.span>
 </styled.h1>,
         <Connect(Timeline) />,
-        <EntryMaker
-          entry={Object {}}
-          stageNewEntry={[Function]}
-          submitEntry={[Function]}
-          userId=""
-/>,
+        <styled.div>
+          <EntryMaker
+                    entry={Object {}}
+                    stageNewEntry={[Function]}
+                    submitEntry={[Function]}
+                    userId=""
+          />
+          <styled.button
+                    onClick={[Function]}
+          >
+                    Save 
+          </styled.button>
+</styled.div>,
       ],
     },
     "ref": null,
@@ -81,15 +89,51 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
-          "entry": Object {},
-          "stageNewEntry": [Function],
-          "submitEntry": [Function],
-          "userId": "",
+          "children": Array [
+            <EntryMaker
+              entry={Object {}}
+              stageNewEntry={[Function]}
+              submitEntry={[Function]}
+              userId=""
+/>,
+            <styled.button
+              onClick={[Function]}
+>
+              Save 
+</styled.button>,
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "entry": Object {},
+              "stageNewEntry": [Function],
+              "submitEntry": [Function],
+              "userId": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Save ",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Save ",
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -109,12 +153,19 @@ ShallowWrapper {
             </styled.span>
 </styled.h1>,
           <Connect(Timeline) />,
-          <EntryMaker
-            entry={Object {}}
-            stageNewEntry={[Function]}
-            submitEntry={[Function]}
-            userId=""
-/>,
+          <styled.div>
+            <EntryMaker
+                        entry={Object {}}
+                        stageNewEntry={[Function]}
+                        submitEntry={[Function]}
+                        userId=""
+            />
+            <styled.button
+                        onClick={[Function]}
+            >
+                        Save 
+            </styled.button>
+</styled.div>,
         ],
       },
       "ref": null,
@@ -160,15 +211,51 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "entry": Object {},
-            "stageNewEntry": [Function],
-            "submitEntry": [Function],
-            "userId": "",
+            "children": Array [
+              <EntryMaker
+                entry={Object {}}
+                stageNewEntry={[Function]}
+                submitEntry={[Function]}
+                userId=""
+/>,
+              <styled.button
+                onClick={[Function]}
+>
+                Save 
+</styled.button>,
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "entry": Object {},
+                "stageNewEntry": [Function],
+                "submitEntry": [Function],
+                "userId": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Save ",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Save ",
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],
