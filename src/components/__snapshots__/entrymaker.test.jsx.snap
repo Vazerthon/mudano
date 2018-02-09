@@ -5,7 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <EntryMaker
-    entry={Object {}}
+    entry={
+        Object {
+            "warnings": Array [],
+          }
+    }
     stageNewEntry={[Function]}
     submitEntry={[Function]}
     userId=""
@@ -137,7 +141,7 @@ ShallowWrapper {
                     </styled.div>
           </styled.div>
           <styled.span>
-                    TODO - warning text
+                    
           </styled.span>
           <styled.button
                     disabled={true}
@@ -277,7 +281,7 @@ ShallowWrapper {
               </styled.div>
 </styled.div>,
             <styled.span>
-              TODO - warning text
+              
 </styled.span>,
             <styled.button
               disabled={true}
@@ -501,10 +505,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "TODO - warning text",
+              "children": Array [],
             },
             "ref": null,
-            "rendered": "TODO - warning text",
+            "rendered": Array [],
             "type": [Function],
           },
           Object {
@@ -649,7 +653,7 @@ ShallowWrapper {
                         </styled.div>
             </styled.div>
             <styled.span>
-                        TODO - warning text
+                        
             </styled.span>
             <styled.button
                         disabled={true}
@@ -789,7 +793,7 @@ ShallowWrapper {
                 </styled.div>
 </styled.div>,
               <styled.span>
-                TODO - warning text
+                
 </styled.span>,
               <styled.button
                 disabled={true}
@@ -1013,10 +1017,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "TODO - warning text",
+                "children": Array [],
               },
               "ref": null,
-              "rendered": "TODO - warning text",
+              "rendered": Array [],
               "type": [Function],
             },
             Object {
