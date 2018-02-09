@@ -46,7 +46,11 @@ const Buttons = styled.div`
   justify-content: space-between;
 `;
 
-const Warnings = styled.span``;
+const Warnings = styled.span`
+  font-weight: 600;
+  text-align: center;
+  color: ${({ theme }) => theme.colour.highlight};
+`;
 
 const allowSubmit = entry => entry.date && entry.unit && entry.value;
 
@@ -113,7 +117,9 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
             </StyledButton>
           </ValueContainer>
         </Selectors>
-        <Warnings>TODO - warning text</Warnings>
+        <Warnings>
+          {entry.warnings.map(w => <p key={w.id}>{w.msg}</p>)}
+        </Warnings>
         <StyledButton
           on={allowSubmit(entry)}
           disabled={!allowSubmit(entry)}

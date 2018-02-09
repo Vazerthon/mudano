@@ -40,7 +40,7 @@ const defaultAppState = {
   user: {},
   publicHolidays,
   timeline: defaultTimeline,
-  stagedEntry: {},
+  stagedEntry: { warnings: [] },
 };
 
 const entriesForUser = (entries, id) => entries.filter(e => e.userId === id);
@@ -99,7 +99,7 @@ const addWarningsToStagedEntry = (entry, users) =>
     e => ({
       ...e,
       warnings: isPast(e.date)
-        ? [...e.warnings, 'This entry is in the past']
+        ? [...e.warnings, { id: 'past', msg: 'This entry is in the past' }]
         : e.warnings,
     }),
   )(entry);

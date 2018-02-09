@@ -161,6 +161,8 @@ describe('app reducer', () => {
 
     const { stagedEntry } = reducer(state, actions.stageNewEntry(entry));
 
-    expect(stagedEntry.warnings).toEqual(['This entry is in the past']);
+    expect(stagedEntry.warnings).toEqual([
+      { id: 'past', msg: 'This entry is in the past' },
+    ]);
   });
 });
