@@ -2,11 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Timeline, {
-  usersPropType,
-  userPropType,
-  timelinePropType,
-} from './Timeline';
+import { userPropType } from './Timeline';
+import ConnectedTimeline from '../containers/timeline';
 
 import EntryMaker from './EntryMaker';
 
@@ -32,21 +29,14 @@ const Sub = styled.span`
   font-size: 0.6em;
 `;
 
-function App({
-  users,
-  user,
-  timeline,
-  stageNewEntry,
-  stagedEntry,
-  submitEntry,
-}) {
+function App({ user, stageNewEntry, stagedEntry, submitEntry }) {
   return (
     <Container>
       <Header>
         Mudano / <Sub>Absentee Manager</Sub>
       </Header>
 
-      <Timeline users={users} user={user} timeline={timeline} />
+      <ConnectedTimeline />
       <EntryMaker
         stageNewEntry={stageNewEntry}
         entry={stagedEntry}
@@ -58,18 +48,14 @@ function App({
 }
 
 App.propTypes = {
-  users: usersPropType,
   user: userPropType,
-  timeline: timelinePropType,
   stageNewEntry: PropTypes.func.isRequired,
   stagedEntry: entryPropType,
   submitEntry: PropTypes.func.isRequired,
 };
 
 App.defaultProps = {
-  users: [],
   user: {},
-  timeline: [],
   stagedEntry: {},
 };
 

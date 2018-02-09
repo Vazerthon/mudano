@@ -99,8 +99,8 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
             </StyledButton>
 
             <StyledButton
-              on={entry.value === 'PRESENT'}
-              onClick={() => stageNewEntry(patch({ value: 'PRESENT' }))}
+              on={entry.value === 'present'}
+              onClick={() => stageNewEntry(patch({ value: 'present' }))}
             >
               Present
             </StyledButton>

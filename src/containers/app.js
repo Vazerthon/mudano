@@ -3,9 +3,7 @@ import App from '../components/App';
 import { actions } from '../state/actions/app';
 
 const mapStateToProps = ({ app }) => ({
-  users: app.users,
   user: app.user,
-  timeline: app.timeline,
   stagedEntry: app.stagedEntry,
 });
 
