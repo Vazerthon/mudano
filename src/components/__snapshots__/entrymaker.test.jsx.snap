@@ -107,24 +107,28 @@ ShallowWrapper {
                     </styled.div>
                     <styled.div>
                               <styled.button
+                                        hint="P"
                                         on={false}
                                         onClick={[Function]}
                               >
                                         Public Holiday
                               </styled.button>
                               <styled.button
+                                        hint="V"
                                         on={false}
                                         onClick={[Function]}
                               >
                                         Vacation
                               </styled.button>
                               <styled.button
+                                        hint="T"
                                         on={false}
                                         onClick={[Function]}
                               >
                                         Training
                               </styled.button>
                               <styled.button
+                                        hint="present"
                                         on={false}
                                         onClick={[Function]}
                               >
@@ -243,24 +247,28 @@ ShallowWrapper {
               </styled.div>
               <styled.div>
                             <styled.button
+                                          hint="P"
                                           on={false}
                                           onClick={[Function]}
                             >
                                           Public Holiday
                             </styled.button>
                             <styled.button
+                                          hint="V"
                                           on={false}
                                           onClick={[Function]}
                             >
                                           Vacation
                             </styled.button>
                             <styled.button
+                                          hint="T"
                                           on={false}
                                           onClick={[Function]}
                             >
                                           Training
                             </styled.button>
                             <styled.button
+                                          hint="present"
                                           on={false}
                                           onClick={[Function]}
                             >
@@ -305,24 +313,28 @@ ShallowWrapper {
 </styled.div>,
                 <styled.div>
                   <styled.button
+                                    hint="P"
                                     on={false}
                                     onClick={[Function]}
                   >
                                     Public Holiday
                   </styled.button>
                   <styled.button
+                                    hint="V"
                                     on={false}
                                     onClick={[Function]}
                   >
                                     Vacation
                   </styled.button>
                   <styled.button
+                                    hint="T"
                                     on={false}
                                     onClick={[Function]}
                   >
                                     Training
                   </styled.button>
                   <styled.button
+                                    hint="present"
                                     on={false}
                                     onClick={[Function]}
                   >
@@ -391,24 +403,28 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <styled.button
+                      hint="P"
                       on={false}
                       onClick={[Function]}
 >
                       Public Holiday
 </styled.button>,
                     <styled.button
+                      hint="V"
                       on={false}
                       onClick={[Function]}
 >
                       Vacation
 </styled.button>,
                     <styled.button
+                      hint="T"
                       on={false}
                       onClick={[Function]}
 >
                       Training
 </styled.button>,
                     <styled.button
+                      hint="present"
                       on={false}
                       onClick={[Function]}
 >
@@ -424,6 +440,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": "Public Holiday",
+                      "hint": "P",
                       "on": false,
                       "onClick": [Function],
                     },
@@ -437,6 +454,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": "Vacation",
+                      "hint": "V",
                       "on": false,
                       "onClick": [Function],
                     },
@@ -450,6 +468,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": "Training",
+                      "hint": "T",
                       "on": false,
                       "onClick": [Function],
                     },
@@ -463,6 +482,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": "Present",
+                      "hint": "present",
                       "on": false,
                       "onClick": [Function],
                     },
@@ -599,24 +619,28 @@ ShallowWrapper {
                         </styled.div>
                         <styled.div>
                                     <styled.button
+                                                hint="P"
                                                 on={false}
                                                 onClick={[Function]}
                                     >
                                                 Public Holiday
                                     </styled.button>
                                     <styled.button
+                                                hint="V"
                                                 on={false}
                                                 onClick={[Function]}
                                     >
                                                 Vacation
                                     </styled.button>
                                     <styled.button
+                                                hint="T"
                                                 on={false}
                                                 onClick={[Function]}
                                     >
                                                 Training
                                     </styled.button>
                                     <styled.button
+                                                hint="present"
                                                 on={false}
                                                 onClick={[Function]}
                                     >
@@ -735,24 +759,28 @@ ShallowWrapper {
                 </styled.div>
                 <styled.div>
                                 <styled.button
+                                                hint="P"
                                                 on={false}
                                                 onClick={[Function]}
                                 >
                                                 Public Holiday
                                 </styled.button>
                                 <styled.button
+                                                hint="V"
                                                 on={false}
                                                 onClick={[Function]}
                                 >
                                                 Vacation
                                 </styled.button>
                                 <styled.button
+                                                hint="T"
                                                 on={false}
                                                 onClick={[Function]}
                                 >
                                                 Training
                                 </styled.button>
                                 <styled.button
+                                                hint="present"
                                                 on={false}
                                                 onClick={[Function]}
                                 >
@@ -797,24 +825,28 @@ ShallowWrapper {
 </styled.div>,
                   <styled.div>
                     <styled.button
+                                        hint="P"
                                         on={false}
                                         onClick={[Function]}
                     >
                                         Public Holiday
                     </styled.button>
                     <styled.button
+                                        hint="V"
                                         on={false}
                                         onClick={[Function]}
                     >
                                         Vacation
                     </styled.button>
                     <styled.button
+                                        hint="T"
                                         on={false}
                                         onClick={[Function]}
                     >
                                         Training
                     </styled.button>
                     <styled.button
+                                        hint="present"
                                         on={false}
                                         onClick={[Function]}
                     >
@@ -883,24 +915,28 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <styled.button
+                        hint="P"
                         on={false}
                         onClick={[Function]}
 >
                         Public Holiday
 </styled.button>,
                       <styled.button
+                        hint="V"
                         on={false}
                         onClick={[Function]}
 >
                         Vacation
 </styled.button>,
                       <styled.button
+                        hint="T"
                         on={false}
                         onClick={[Function]}
 >
                         Training
 </styled.button>,
                       <styled.button
+                        hint="present"
                         on={false}
                         onClick={[Function]}
 >
@@ -916,6 +952,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Public Holiday",
+                        "hint": "P",
                         "on": false,
                         "onClick": [Function],
                       },
@@ -929,6 +966,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Vacation",
+                        "hint": "V",
                         "on": false,
                         "onClick": [Function],
                       },
@@ -942,6 +980,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Training",
+                        "hint": "T",
                         "on": false,
                         "onClick": [Function],
                       },
@@ -955,6 +994,7 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "children": "Present",
+                        "hint": "present",
                         "on": false,
                         "onClick": [Function],
                       },

@@ -21,6 +21,9 @@ const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.colour.primary};
   color: ${({ theme, on }) =>
     on ? theme.colour.highlight : theme.colour.secondary};
+
+  border-bottom: ${({ theme, hint }) =>
+    hint ? `4px solid ${theme.colour.timeline[hint]}` : 'none'};
 `;
 
 const UnitContainer = styled.div`
@@ -79,6 +82,7 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
           <ValueContainer>
             <StyledButton
               on={entry.value === 'P'}
+              hint="P"
               onClick={() => stageNewEntry(patch({ value: 'P' }))}
             >
               Public Holiday
@@ -86,6 +90,7 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
 
             <StyledButton
               on={entry.value === 'V'}
+              hint="V"
               onClick={() => stageNewEntry(patch({ value: 'V' }))}
             >
               Vacation
@@ -93,6 +98,7 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
 
             <StyledButton
               on={entry.value === 'T'}
+              hint="T"
               onClick={() => stageNewEntry(patch({ value: 'T' }))}
             >
               Training
@@ -100,6 +106,7 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
 
             <StyledButton
               on={entry.value === 'present'}
+              hint="present"
               onClick={() => stageNewEntry(patch({ value: 'present' }))}
             >
               Present
