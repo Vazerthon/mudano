@@ -1,4 +1,11 @@
-import { isFriday, addDays, isEqual, format } from 'date-fns';
+import {
+  isFriday,
+  addDays,
+  subDays,
+  isEqual,
+  format,
+  isWithinRange,
+} from 'date-fns';
 
 const getNextWeekDay = day =>
   isFriday(day) ? addDays(day, 3) : addDays(day, 1);
@@ -23,3 +30,12 @@ export const assignPublicHolidayStatus = (dates, publicHolidays) =>
   }));
 
 export const prettyDate = date => format(date, 'Do MMM YY');
+
+export const areEqual = (d1, d2) => prettyDate(d1) === prettyDate(d2);
+
+export const adjacentTo = (d1, d2) =>
+  isWithinRange(d1, subDays(d2, 1), addDays(d2, 1));
+
+export const closeTo = (d1, d2) =>
+  isWithinRange(d1, subDays(d2, 4), subDays(d2, 2)) ||
+  isWithinRange(d1, addDays(d2, 2), addDays(d2, 4));

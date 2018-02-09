@@ -180,4 +180,34 @@ describe('app reducer', () => {
       { id: 'same', msg: 'This entry overlaps with another user' },
     ]);
   });
+
+  it('Warns if staged entry is adjacent to an existing entry', () => {
+    const entry = { date: new Date(2019, 0, 1) };
+
+    const state = {
+      stagedEntry: {},
+      users: [{ userId: 'abc', entries: [{ date: new Date(2019, 0, 2) }] }],
+    };
+
+    const { stagedEntry } = reducer(state, actions.stageNewEntry(entry));
+
+    expect(stagedEntry.warnings).toEqual([
+      { id: 'adjacent', msg: 'This entry is adjacent to another user' },
+    ]);
+  });
+
+  it('Warns if staged entry is within four days of existing entry', () => {
+    const entry = { date: new Date(2019, 0, 1) };
+
+    const state = {
+      stagedEntry: {},
+      users: [{ userId: 'abc', entries: [{ date: new Date(2019, 0, 5) }] }],
+    };
+
+    const { stagedEntry } = reducer(state, actions.stageNewEntry(entry));
+
+    expect(stagedEntry.warnings).toEqual([
+      { id: 'close', msg: 'This entry is close to another user' },
+    ]);
+  });
 });

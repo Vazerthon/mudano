@@ -4,7 +4,9 @@ import { constants } from '../actions/app';
 import {
   getWeekDaysFrom,
   assignPublicHolidayStatus,
-  prettyDate,
+  adjacentTo,
+  areEqual,
+  closeTo,
 } from '../utils/date';
 
 // TODO - ideally load this as a side effect
@@ -62,9 +64,7 @@ const extractUsersFromEntries = entries =>
   )(entries);
 
 const existingEntryIndex = (entries, entry) =>
-  entries.findIndex(
-    e => prettyDate(e.date) === prettyDate(entry.date) && e.unit === entry.unit,
-  );
+  entries.findIndex(e => areEqual(e.date, entry.date) && e.unit === entry.unit);
 
 const updateAppend = (i, entries, entry) =>
   i >= 0 ? R.update(i, entry)(entries) : R.append(entry)(entries);
@@ -103,12 +103,30 @@ const addWarningsToStagedEntry = (entry, allEntries) =>
     }),
     e => ({
       ...e,
-      warnings: allEntries.some(
-        en => prettyDate(en.date) === prettyDate(entry.date),
-      )
+      warnings: allEntries.some(en => areEqual(en.date, entry.date))
         ? [
             ...e.warnings,
             { id: 'same', msg: 'This entry overlaps with another user' },
+          ]
+        : e.warnings,
+    }),
+    e => ({
+      ...e,
+      warnings: allEntries.some(
+        en => !areEqual(en.date, entry.date) && adjacentTo(en.date, entry.date),
+      )
+        ? [
+            ...e.warnings,
+            { id: 'adjacent', msg: 'This entry is adjacent to another user' },
+          ]
+        : e.warnings,
+    }),
+    e => ({
+      ...e,
+      warnings: allEntries.some(en => closeTo(en.date, entry.date))
+        ? [
+            ...e.warnings,
+            { id: 'close', msg: 'This entry is close to another user' },
           ]
         : e.warnings,
     }),
