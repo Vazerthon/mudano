@@ -6,9 +6,11 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
     saveEntries={[Function]}
+    showEntryMaker={true}
     stageNewEntry={[Function]}
     stagedEntry={Object {}}
     submitEntry={[Function]}
+    toggleEntryMaker={[Function]}
     user={Object {}}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -30,8 +32,19 @@ ShallowWrapper {
                     Absentee Manager
           </styled.span>
 </styled.h1>,
-        <Connect(Timeline) />,
         <styled.div>
+          <Connect(Timeline) />
+</styled.div>,
+        <styled.div
+          visible={true}
+>
+          <styled.div
+                    onClick={[Function]}
+          >
+                    <MdMenu
+                              size={30}
+                    />
+          </styled.div>
           <EntryMaker
                     entry={Object {}}
                     stageNewEntry={[Function]}
@@ -81,9 +94,19 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "children": <Connect(Timeline) />,
+        },
         "ref": null,
-        "rendered": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         "type": [Function],
       },
       Object {
@@ -92,6 +115,13 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": Array [
+            <styled.div
+              onClick={[Function]}
+>
+              <MdMenu
+                            size={30}
+              />
+</styled.div>,
             <EntryMaker
               entry={Object {}}
               stageNewEntry={[Function]}
@@ -104,9 +134,34 @@ ShallowWrapper {
               Save 
 </styled.button>,
           ],
+          "visible": true,
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <MdMenu
+                size={30}
+/>,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "size": 30,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -152,8 +207,19 @@ ShallowWrapper {
                         Absentee Manager
             </styled.span>
 </styled.h1>,
-          <Connect(Timeline) />,
           <styled.div>
+            <Connect(Timeline) />
+</styled.div>,
+          <styled.div
+            visible={true}
+>
+            <styled.div
+                        onClick={[Function]}
+            >
+                        <MdMenu
+                                    size={30}
+                        />
+            </styled.div>
             <EntryMaker
                         entry={Object {}}
                         stageNewEntry={[Function]}
@@ -203,9 +269,19 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "children": <Connect(Timeline) />,
+          },
           "ref": null,
-          "rendered": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           "type": [Function],
         },
         Object {
@@ -214,6 +290,13 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
+              <styled.div
+                onClick={[Function]}
+>
+                <MdMenu
+                                size={30}
+                />
+</styled.div>,
               <EntryMaker
                 entry={Object {}}
                 stageNewEntry={[Function]}
@@ -226,9 +309,34 @@ ShallowWrapper {
                 Save 
 </styled.button>,
             ],
+            "visible": true,
           },
           "ref": null,
           "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <MdMenu
+                  size={30}
+/>,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "size": 30,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,

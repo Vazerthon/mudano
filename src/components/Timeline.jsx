@@ -9,17 +9,19 @@ import DayCell, { entryPropType } from './DayCell';
 
 const Container = styled.div`
   display: flex;
-  height: 61vh;
-  width: 99vw;
   align-items: flex-end;
   margin-bottom: 8px;
 `;
 
 const Scroller = styled.div`
-  overflow-x: auto;
+  overflow-x: scroll;
+`;
+
+const OverflowContainer = styled.div`
   display: flex;
   align-items: flex-end;
-  height: 100%;
+  margin-top: 50px;
+  overflow: visible;
 `;
 
 const DateTimeline = styled.div`
@@ -71,21 +73,23 @@ function Timeline({ users, user, timeline }) {
         ))}
       </Usernames>
       <Scroller>
-        <DateTimeline>
-          {timeline.map(d => (
-            <DateColumn key={d.date}>
-              <HighlightOverlay height={(users.length + 1) * 20} />
-              <DateLabel>{prettyDate(d.date)}</DateLabel>
-              {users.map(u => (
-                <DayCell
-                  key={u.userId}
-                  entries={matchingEntries(u.entries, d.date)}
-                  isPublicHoliday={d.isPublicHoliday}
-                />
-              ))}
-            </DateColumn>
-          ))}
-        </DateTimeline>
+        <OverflowContainer>
+          <DateTimeline>
+            {timeline.map(d => (
+              <DateColumn key={d.date}>
+                <HighlightOverlay height={(users.length + 1) * 20} />
+                <DateLabel>{prettyDate(d.date)}</DateLabel>
+                {users.map(u => (
+                  <DayCell
+                    key={u.userId}
+                    entries={matchingEntries(u.entries, d.date)}
+                    isPublicHoliday={d.isPublicHoliday}
+                  />
+                ))}
+              </DateColumn>
+            ))}
+          </DateTimeline>
+        </OverflowContainer>
       </Scroller>
     </Container>
   );

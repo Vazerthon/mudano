@@ -32,7 +32,7 @@ const addPublicHolidayFlag = dates =>
   assignPublicHolidayStatus(dates, publicHolidays);
 
 const defaultTimeline = R.pipe(
-  () => getWeekDaysFrom(new Date(2017, 0, 1), 300),
+  () => getWeekDaysFrom(new Date(2018, 1, 9), 300),
   addPublicHolidayFlag,
 )();
 
@@ -42,6 +42,7 @@ const defaultAppState = {
   publicHolidays,
   timeline: defaultTimeline,
   stagedEntry: { warnings: [] },
+  showEntryMaker: true,
 };
 
 const entriesForUser = (entries, id) => entries.filter(e => e.userId === id);
@@ -174,6 +175,8 @@ const appReducer = (state = defaultAppState, action) => {
           ),
         ],
       };
+    case constants.toggleEntryMaker:
+      return { ...state, showEntryMaker: !state.showEntryMaker };
     default:
       return state;
   }

@@ -5,6 +5,7 @@ export const constants = {
   stageNewEntry: '[APP] STAGE A NEW ENTRY',
   submitEntry: '[APP] SUBMIT ENTRY',
   saveEntries: '[APP] SAVE ALL ENTRIES',
+  toggleEntryMaker: '[APP] TOGGLE ENTRY MAKER VISIBILITY',
 };
 
 export const actions = {
@@ -28,4 +29,5 @@ export const actions = {
     payload: { userId, entry },
   }),
   saveEntries: () => ({ type: constants.saveEntries }),
+  toggleEntryMaker: () => ({ type: constants.toggleEntryMaker }),
 };

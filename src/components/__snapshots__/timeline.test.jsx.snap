@@ -27,7 +27,9 @@ ShallowWrapper {
 </styled.div>,
         <styled.div>
           <styled.div>
-                    
+                    <styled.div>
+                              
+                    </styled.div>
           </styled.div>
 </styled.div>,
       ],
@@ -51,7 +53,9 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <styled.div>
-            
+            <styled.div>
+                        
+            </styled.div>
 </styled.div>,
         },
         "ref": null,
@@ -60,10 +64,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": Array [],
+            "children": <styled.div>
+              
+</styled.div>,
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [],
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],
@@ -83,7 +99,9 @@ ShallowWrapper {
 </styled.div>,
           <styled.div>
             <styled.div>
-                        
+                        <styled.div>
+                                    
+                        </styled.div>
             </styled.div>
 </styled.div>,
         ],
@@ -107,7 +125,9 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <styled.div>
-              
+              <styled.div>
+                            
+              </styled.div>
 </styled.div>,
           },
           "ref": null,
@@ -116,10 +136,22 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": Array [],
+              "children": <styled.div>
+                
+</styled.div>,
             },
             "ref": null,
-            "rendered": Array [],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [],
+              },
+              "ref": null,
+              "rendered": Array [],
+              "type": [Function],
+            },
             "type": [Function],
           },
           "type": [Function],

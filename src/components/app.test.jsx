@@ -15,6 +15,7 @@ describe('app component', () => {
         stageNewEntry={() => {}}
         submitEntry={() => {}}
         saveEntries={() => {}}
+        toggleEntryMaker={() => {}}
       />,
     );
     expect(wrapper).toMatchSnapshot();

@@ -5,6 +5,7 @@ import { actions } from '../state/actions/app';
 const mapStateToProps = ({ app }) => ({
   user: app.user,
   stagedEntry: app.stagedEntry,
+  showEntryMaker: app.showEntryMaker,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -13,6 +14,7 @@ const mapDispatchToProps = dispatch => ({
   stageNewEntry: entry => dispatch(actions.stageNewEntry(entry)),
   submitEntry: (userId, entry) => dispatch(actions.submitEntry(userId, entry)),
   saveEntries: () => dispatch(actions.saveEntries()),
+  toggleEntryMaker: () => dispatch(actions.toggleEntryMaker()),
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({
