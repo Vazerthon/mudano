@@ -42,11 +42,12 @@ const BelowTimeline = styled.div`
   position: fixed;
   bottom: 10px;
   left: 0;
-  border-top: 2px solid ${({ theme }) => theme.colour.primary};
   padding-top: 8px;
 
   transform: ${({ visible }) => (visible ? 'none' : 'translateY(36vh)')};
   transition: transform 0.4s ease-in-out;
+
+  box-shadow: 0 -2px 8px ${({ theme }) => `${theme.colour.primary}`};
 `;
 
 const OpenCloseButton = styled.div`

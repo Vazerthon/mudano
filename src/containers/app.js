@@ -21,8 +21,8 @@ const mergeProps = (stateProps, dispatchProps) => ({
   ...stateProps,
   ...dispatchProps,
   componentDidMount: () => {
-    dispatchProps.loadData();
     dispatchProps.login();
+    dispatchProps.loadData();
   },
 });
 
