@@ -29,7 +29,7 @@ export const assignPublicHolidayStatus = (dates, publicHolidays) =>
     isPublicHoliday: isPublicHoliday(d.date, publicHolidays),
   }));
 
-export const prettyDate = date => format(date, 'Do MMM YY');
+export const prettyDate = date => format(date, 'D MMM YY');
 
 export const areEqual = (d1, d2) => prettyDate(d1) === prettyDate(d2);
 

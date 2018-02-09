@@ -9,8 +9,10 @@ import DayCell, { entryPropType } from './DayCell';
 
 const Container = styled.div`
   display: flex;
-  height: 63vh;
+  height: 61vh;
+  width: 99vw;
   align-items: flex-end;
+  margin-bottom: 8px;
 `;
 
 const Scroller = styled.div`
