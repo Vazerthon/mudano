@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { isWeekend } from 'date-fns';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -63,6 +64,7 @@ function EntryMaker({ stageNewEntry, entry, submitEntry, userId }) {
         numberOfMonths={3}
         onDateChange={date => stageNewEntry(patch({ date }))}
         date={entry.date}
+        isDayBlocked={d => isWeekend(d)}
       />
 
       <Buttons>
