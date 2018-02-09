@@ -1,12 +1,11 @@
 import * as R from 'ramda';
+import { isPast } from 'date-fns';
 import { constants } from '../actions/app';
 import {
   getWeekDaysFrom,
   assignPublicHolidayStatus,
   prettyDate,
 } from '../utils/date';
-
-import { isPast } from 'date-fns';
 
 // TODO - ideally load this as a side effect
 const publicHolidays = [
@@ -31,7 +30,7 @@ const addPublicHolidayFlag = dates =>
   assignPublicHolidayStatus(dates, publicHolidays);
 
 const defaultTimeline = R.pipe(
-  () => getWeekDaysFrom(new Date(2018, 0, 1), 300),
+  () => getWeekDaysFrom(new Date(2017, 0, 1), 300),
   addPublicHolidayFlag,
 )();
 
@@ -93,13 +92,24 @@ const addNewEntryForUser = (users, userId, entry) =>
     i => updateUserEntry(users, i, entry),
   )();
 
-const addWarningsToStagedEntry = (entry, users) =>
+const addWarningsToStagedEntry = (entry, allEntries) =>
   R.pipe(
     e => ({ ...e, warnings: [] }),
     e => ({
       ...e,
       warnings: isPast(e.date)
         ? [...e.warnings, { id: 'past', msg: 'This entry is in the past' }]
+        : e.warnings,
+    }),
+    e => ({
+      ...e,
+      warnings: allEntries.some(
+        en => prettyDate(en.date) === prettyDate(entry.date),
+      )
+        ? [
+            ...e.warnings,
+            { id: 'same', msg: 'This entry overlaps with another user' },
+          ]
         : e.warnings,
     }),
   )(entry);
@@ -131,7 +141,7 @@ const appReducer = (state = defaultAppState, action) => {
         ...state,
         stagedEntry: addWarningsToStagedEntry(
           action.payload.entry,
-          state.users,
+          state.users.map(u => u.entries).reduce((p, c) => [...p, ...c], []),
         ),
       };
     case constants.submitEntry:

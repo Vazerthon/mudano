@@ -124,7 +124,7 @@ describe('app reducer', () => {
     const payload = { date: new Date(2020, 1, 1), unit: 'x', value: 'y' };
 
     const { stagedEntry } = reducer(
-      { stagedEntry: {} },
+      { stagedEntry: {}, users: [] },
       actions.stageNewEntry(payload),
     );
 
@@ -163,6 +163,21 @@ describe('app reducer', () => {
 
     expect(stagedEntry.warnings).toEqual([
       { id: 'past', msg: 'This entry is in the past' },
+    ]);
+  });
+
+  it('Warns if staged entry is on same day as an existing entry', () => {
+    const entry = { date: new Date(2019, 0, 1) };
+
+    const state = {
+      stagedEntry: {},
+      users: [{ userId: 'abc', entries: [{ date: new Date(2019, 0, 1) }] }],
+    };
+
+    const { stagedEntry } = reducer(state, actions.stageNewEntry(entry));
+
+    expect(stagedEntry.warnings).toEqual([
+      { id: 'same', msg: 'This entry overlaps with another user' },
     ]);
   });
 });
