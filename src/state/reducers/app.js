@@ -1,6 +1,10 @@
 import * as R from 'ramda';
 import { constants } from '../actions/app';
-import { getWeekDaysFrom, assignPublicHolidayStatus } from '../utils/date';
+import {
+  getWeekDaysFrom,
+  assignPublicHolidayStatus,
+  prettyDate,
+} from '../utils/date';
 
 // TODO - ideally load this as a side effect
 const publicHolidays = [
@@ -56,13 +60,28 @@ const extractUsersFromEntries = entries =>
       })),
   )(entries);
 
-// TODO - this will create duplicates
+const existingEntryIndex = (entries, entry) =>
+  entries.findIndex(
+    e => prettyDate(e.date) === prettyDate(entry.date) && e.unit === entry.unit,
+  );
+
+const updateAppend = (i, entries, entry) =>
+  i >= 0 ? R.update(i, entry)(entries) : R.append(entry)(entries);
+
+const updatedEntries = (entries, entry) =>
+  R.pipe(existingEntryIndex, i => updateAppend(i, entries, entry))(
+    entries,
+    entry,
+  );
+
 const updateUserEntry = (users, index, entry) =>
   R.update(index, {
     ...users[index],
     entries: [
-      ...users[index].entries,
-      { ...entry, date: new Date(entry.date) },
+      ...updatedEntries(users[index].entries, {
+        ...entry,
+        date: new Date(entry.date),
+      }),
     ],
   })(users);
 

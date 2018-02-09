@@ -1,4 +1,4 @@
-import { isFriday, addDays, isEqual } from 'date-fns';
+import { isFriday, addDays, isEqual, format } from 'date-fns';
 
 const getNextWeekDay = day =>
   isFriday(day) ? addDays(day, 3) : addDays(day, 1);
@@ -21,3 +21,5 @@ export const assignPublicHolidayStatus = (dates, publicHolidays) =>
     ...d,
     isPublicHoliday: isPublicHoliday(d.date, publicHolidays),
   }));
+
+export const prettyDate = date => format(date, 'Do MMM YY');

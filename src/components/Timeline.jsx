@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { format } from 'date-fns';
+
+import { prettyDate } from '../state/utils/date';
 
 import Username from './Username';
 import DayCell, { entryPropType } from './DayCell';
@@ -53,8 +54,6 @@ const HighlightOverlay = styled.div`
     opacity: 0.4;
   }
 `;
-
-const prettyDate = date => format(date, 'Do MMM YY');
 
 // matching on date only string avoids time/daylight savings problems
 const matchingEntries = (entries, date) =>

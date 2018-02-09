@@ -141,4 +141,16 @@ describe('app reducer', () => {
     expect(result.stagedEntry).toEqual({});
     expect(result.users[0].entries[0]).toEqual(entry);
   });
+
+  it('Overwrittes an entry if date and unit match', () => {
+    const entryA = { date: new Date(1, 1, 1), unit: 'x', value: 'y' };
+    const entryB = { date: new Date(1, 1, 1), unit: 'x', value: 'z' };
+
+    const state = { stagedEntry: {}, users: [{ userId: 'abc', entries: [] }] };
+
+    const resultA = reducer(state, actions.submitEntry('abc', entryA));
+    const resultB = reducer(resultA, actions.submitEntry('abc', entryB));
+
+    expect(resultB.users[0].entries.length).toBe(1);
+  });
 });
