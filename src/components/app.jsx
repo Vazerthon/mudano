@@ -53,7 +53,7 @@ const OpenCloseButton = styled.div`
   position: relative;
   left: 50vw;
   top: -30px;
-  border: 4px solid ${({ theme }) => theme.colour.primary};
+  border: 3px solid ${({ theme }) => theme.colour.primary};
   background-color: ${({ theme }) => theme.colour.secondary};
   width: 40px;
   height: 40px;
