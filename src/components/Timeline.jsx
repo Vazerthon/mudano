@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { format, isEqual } from 'date-fns';
+import { format } from 'date-fns';
 
 import Username from './Username';
 import DayCell, { entryPropType } from './DayCell';
@@ -54,10 +54,11 @@ const HighlightOverlay = styled.div`
   }
 `;
 
-const matchingEntries = (entries, date) =>
-  entries.filter(e => isEqual(e.date, date));
-
 const prettyDate = date => format(date, 'Do MMM YY');
+
+// matching on date only string avoids time/daylight savings problems
+const matchingEntries = (entries, date) =>
+  entries.filter(e => prettyDate(e.date) === prettyDate(date));
 
 function Timeline({ users, user, timeline }) {
   return (
@@ -77,7 +78,7 @@ function Timeline({ users, user, timeline }) {
               <DateLabel>{prettyDate(d.date)}</DateLabel>
               {users.map(u => (
                 <DayCell
-                  key={`${u.userId}-${prettyDate(d.date)}`}
+                  key={u.userId}
                   entries={matchingEntries(u.entries, d.date)}
                   isPublicHoliday={d.isPublicHoliday}
                 />

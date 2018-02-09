@@ -25,7 +25,7 @@ const addPublicHolidayFlag = dates =>
   assignPublicHolidayStatus(dates, publicHolidays);
 
 const defaultTimeline = R.pipe(
-  () => getWeekDaysFrom(new Date(2017, 0, 1), 365),
+  () => getWeekDaysFrom(new Date(2018, 0, 1), 300),
   addPublicHolidayFlag,
 )();
 
@@ -60,7 +60,10 @@ const extractUsersFromEntries = entries =>
 const updateUserEntry = (users, index, entry) =>
   R.update(index, {
     ...users[index],
-    entries: [...users[index].entries, entry],
+    entries: [
+      ...users[index].entries,
+      { ...entry, date: new Date(entry.date) },
+    ],
   })(users);
 
 const addNewEntryForUser = (users, userId, entry) =>
@@ -83,7 +86,13 @@ const appReducer = (state = defaultAppState, action) => {
       return {
         ...state,
         user: { ...action.payload },
-        users: [...state.users, { ...action.payload, entries: [] }],
+        users: [
+          ...state.users,
+          {
+            ...action.payload,
+            entries: [],
+          },
+        ],
       };
     case constants.stageNewEntry:
       return {
@@ -94,11 +103,13 @@ const appReducer = (state = defaultAppState, action) => {
       return {
         ...state,
         stagedEntry: {},
-        users: addNewEntryForUser(
-          state.users,
-          action.payload.userId,
-          action.payload.entry,
-        ),
+        users: [
+          ...addNewEntryForUser(
+            state.users,
+            action.payload.userId,
+            action.payload.entry,
+          ),
+        ],
       };
     default:
       return state;
