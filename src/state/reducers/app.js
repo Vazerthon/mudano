@@ -56,8 +56,18 @@ const extractUsersFromEntries = entries =>
       })),
   )(entries);
 
-// TODO - implement updating entries
-const addNewEntryForUser = (users, userId, entry) => users;
+// TODO - this will create duplicates
+const updateUserEntry = (users, index, entry) =>
+  R.update(index, {
+    ...users[index],
+    entries: [...users[index].entries, entry],
+  })(users);
+
+const addNewEntryForUser = (users, userId, entry) =>
+  R.pipe(
+    () => users.findIndex(u => u.userId === userId),
+    i => updateUserEntry(users, i, entry),
+  )();
 
 const appReducer = (state = defaultAppState, action) => {
   switch (action.type) {

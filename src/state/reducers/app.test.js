@@ -132,14 +132,13 @@ describe('app reducer', () => {
   });
 
   it('Submits a new entry correctly', () => {
-    const payload = { date: new Date(1, 1, 1), unit: 'x', value: 'y' };
+    const entry = { date: new Date(1, 1, 1), unit: 'x', value: 'y' };
 
-    const { stagedEntry, users } = reducer(
-      { stagedEntry: { users: [{ userId: 'abc', entries: [] }] } },
-      actions.submitEntry('abc', payload),
-    );
+    const state = { stagedEntry: {}, users: [{ userId: 'abc', entries: [] }] };
 
-    expect(stagedEntry).toEqual({});
-    expect(users[0].entries[0]).toEqual(payload);
+    const result = reducer(state, actions.submitEntry('abc', entry));
+
+    expect(result.stagedEntry).toEqual({});
+    expect(result.users[0].entries[0]).toEqual(entry);
   });
 });

@@ -4,7 +4,7 @@ import { actions } from '../state/actions/app';
 
 const mapStateToProps = ({ app: { users, user, timeline, stagedEntry } }) => ({
   users,
-  user: users.find(u => u.userId === user.userId),
+  user,
   timeline,
   stagedEntry,
 });
